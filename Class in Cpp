@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+class demo
+{
+    public:
+        int i;      //characteristics
+        float f;    //characteristics
+
+        demo()  //Constructor
+        {
+            cout<<"inside Constructor \n";
+            i=0;
+            f= 0.0;
+        }
+        ~demo() //Destructor
+        {
+            cout<<"inside Destructor\n";
+        }
+
+        void fun()  //behaviour
+        {
+            cout<<"inside fun \n";
+        }
+};
+
+int main()
+{
+    cout<<"inside main \n";
+
+
+    demo dobj;  //object creation
+
+    cout<<"i ="<<dobj.i<<"\n"; //0
+    dobj.fun();
+
+    cout<<"End of main \n";
+    return 0;
+}
