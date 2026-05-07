@@ -1,0 +1,57 @@
+#include<iostream>
+
+using namespace std;
+
+//encapsulation
+class Marvellous
+{
+    //access specifier
+    public:
+    int No1, No2;    //characteristics
+
+    //default constructor
+    Marvellous()
+
+    {
+        cout<<"inside default constructor\n";
+        No1 = 0;
+        No2 = 0;
+    }
+
+    //paramtrised constructor
+    Marvellous(int A, int B)
+
+    {
+        cout<<"inside paramtrised constructor\n";
+        No1 = A;
+        No2 = B;
+    }
+
+    //copy constructor
+    Marvellous(Marvellous &ref)
+    {
+         cout<<"inside copy constructor\n";
+         No1 = ref.No1;
+         No2 = ref.No2;
+    }
+
+    //destructor
+    ~Marvellous()
+    {
+        cout<<"inside destructor\n";
+    }
+   
+};
+
+int main()
+{
+
+    cout<<"inside main\n";
+    Marvellous mobj1;             //default constructor
+    Marvellous mobj2(11,21);        //paramtrised constructor
+    Marvellous mobj3(mobj2);        //copy constructor
+
+    cout<<"end of main\n";
+    return 0;
+
+}  //all destructors gets called
