@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+    int Age=0;
+    cout<<"your age is:";
+    cin>>Age;
+
+    return 0 ;
+}
